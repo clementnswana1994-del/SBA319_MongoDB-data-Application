@@ -68,7 +68,7 @@ app.put("/api/product/:id", async (req, res) => {
   }
 });
 
-// Delete a user by ID
+// Delete a product by ID
 app.delete("/api/product/:id", async (req, res) => {
   try {
     const { id } = req.params;
