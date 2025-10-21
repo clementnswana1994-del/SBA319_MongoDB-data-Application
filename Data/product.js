@@ -16,16 +16,14 @@ const ProductSchema = new mongoose.Schema({
     required: true,
     default: 0
   },
-
-  image: {
-    type: String,
-    required: false
-  },
 },
+
 {
     timestamps: true
 }
 );
+
+ProductSchema.index({ category: 1 });
 
 const Product = mongoose.model("Product", ProductSchema, "Products");
 
